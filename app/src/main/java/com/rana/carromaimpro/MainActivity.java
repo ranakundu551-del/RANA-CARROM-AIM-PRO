@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
         }
         float clamp(float v,float a,float b){return Math.max(a,Math.min(b,v));}
         @Override protected void onDraw(Canvas c){
-            super.onDraw(c); c.drawColor(Color.rgb(25,32,39)); setup();
+            super.onDraw(c); c.drawColor(Color.rgb(25,32,39)); setup(); if(moving) step();
             text(c,"RANA CARROM AIM PRO",22,42,25,Color.WHITE,true);
             fill(p,Color.rgb(184,119,62)); c.drawRoundRect(left,top,left+size,top+size,18,18,p);
             fill(p,Color.rgb(247,221,180)); c.drawRoundRect(left+18,top+18,left+size-18,top+size-18,10,10,p);
